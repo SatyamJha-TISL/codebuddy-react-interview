@@ -14,8 +14,6 @@ const StepOne = ({ setPage, formData, setformData }) => {
   const [passwordError, setPasswordError] = useState('');
 
   const validateemailId = () => {
-    // eslint-disable-next-line no-console
-    console.log('working');
     if (!firstDetails.emailId) {
       setemailIdError('emailId is required.');
       return false;
@@ -31,8 +29,6 @@ const StepOne = ({ setPage, formData, setformData }) => {
   };
 
   const validatePassword = () => {
-    // eslint-disable-next-line no-console
-    console.log('working');
     if (!firstDetails.password) {
       setPasswordError('Password is required.');
       return false;
@@ -60,8 +56,6 @@ const StepOne = ({ setPage, formData, setformData }) => {
   const handleSave = () => {
     if (validateemailId() && validatePassword()) {
       setformData({ ...formData, emailId: firstDetails.emailId, password: firstDetails.password });
-      // eslint-disable-next-line no-console
-      console.log('working');
       return true;
     }
 
